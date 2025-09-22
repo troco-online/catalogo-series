@@ -1,0 +1,237 @@
+body {
+  background: #0f0f0f;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #1c1c1c;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+}
+
+#catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 2px solid #333;
+  transition: height 0.3s;
+}
+
+
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 0 0 10px;
+  color: #bbb;
+}
+
+.card button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #e50914;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#planos {
+  padding: 40px 20px;
+  background-color: #121212;
+  /* fundo escuro */
+  color: #fff;
+}
+
+#planos h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #f8f5f2;
+}
+
+.planos-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.plano {
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  padding: 25px 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plano:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.plano h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #f8f5f2;
+}
+
+.plano p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.btn-assinar {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff4500;
+  /* botão laranja chamativo */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-assinar:hover {
+  background-color: #e03e00;
+}
+
+.btn-comprar {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0088cc;
+  /* azul Telegram */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+  background-color: #006699;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 5px;
+    gap: 10px;
+  }
+
+  header input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #catalogo {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 4px;
+  }
+
+  .card img {
+    height: 220px;
+  }
+
+  .card h3 {
+    font-size: 14px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .card button {
+    font-size: 14px;
+    padding: 7px 10px;
+  }
+
+  #planos {
+    padding: 20px 5px;
+  }
+
+  .planos-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .plano {
+    width: 95%;
+    padding: 15px 5px;
+  }
+
+  .plano h3 {
+    font-size: 17px;
+  }
+
+  .plano p {
+    font-size: 14px;
+  }
+
+  .btn-assinar,
+  .btn-comprar {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+#catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  #catalogo {
+    grid-template-columns: repeat(2, 1fr);
+    /* sempre 2 colunas no celular */
+    gap: 10px;
+    padding: 10px 5px;
+  }
+
+  .card img {
+    height: 220px;
+    /* altura maior para o card no celular */
+  }
+}
